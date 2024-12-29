@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Personal</title>
+    <title>Predicción de Diabetes con Machine Learning</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,66 +12,74 @@
             background-color: #f4f4f9;
             color: #333;
             line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        nav {
-            background: #444;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        section {
+        .container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
+            max-width: 400px;
             width: 100%;
+            text-align: center;
+        }
+        h1 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-size: 1em;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        button {
+            background: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #2980b9;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Bienvenido a Mi Página</h1>
-        <p>Un espacio para compartir sobre mí y mis proyectos</p>
-    </header>
-    <nav>
-        <a href="#about">Sobre Mí</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#contact">Contacto</a>
-    </nav>
-    <section id="about">
-        <h2>Sobre Mí</h2>
-        <p>Soy una persona apasionada por la tecnología y el diseño web. Me encanta crear cosas nuevas y aprender constantemente.</p>
-    </section>
-    <section id="projects">
-        <h2>Proyectos</h2>
-        <ul>
-            <li><strong>Proyecto 1:</strong> Página web de muestra</li>
-            <li><strong>Proyecto 2:</strong> Aplicación de seguimiento de tareas</li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>Contacto</h2>
-        <p>Puedes contactarme en: <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></p>
-    </section>
-    <footer>
-        &copy; 2024 Mi Nombre. Todos los derechos reservados.
-    </footer>
+    <div class="container">
+        <h1>Predicción de Diabetes con Machine Learning</h1>
+        <form action="#" method="POST">
+            <label for="glucose">Nivel de Glucosa:</label>
+            <input type="number" id="glucose" name="glucose" placeholder="Introduce tu nivel de glucosa" required>
+
+            <label for="bmi">Índice de Masa Corporal (IMC):</label>
+            <input type="number" step="0.1" id="bmi" name="bmi" placeholder="Introduce tu IMC" required>
+
+            <label for="age">Edad:</label>
+            <input type="number" id="age" name="age" placeholder="Introduce tu edad" required>
+
+            <label for="pregnancies">Número de Embarazos:</label>
+            <input type="number" id="pregnancies" name="pregnancies" placeholder="Introduce el número de embarazos">
+
+            <button type="submit">Predecir Diabetes</button>
+        </form>
+    </div>
 </body>
 </html>
