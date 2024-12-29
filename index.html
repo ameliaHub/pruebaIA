@@ -1,85 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Predicción de Diabetes con Machine Learning</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 400px;
-            width: 100%;
-            text-align: center;
-        }
-        h1 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        label {
-            font-size: 1em;
-            margin-bottom: 5px;
-            text-align: left;
-        }
-        input {
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-        button {
-            background: #3498db;
-            color: #fff;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 1em;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        button:hover {
-            background: #2980b9;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Desgracias</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Predicción de Diabetes con Machine Learning</h1>
-        <form action="#" method="POST">
-            <label for="glucose">Nivel de Glucosa:</label>
-            <input type="number" id="glucose" name="glucose" placeholder="Introduce tu nivel de glucosa" required>
-
-            <label for="bmi">Índice de Masa Corporal (IMC):</label>
-            <input type="number" step="0.1" id="bmi" name="bmi" placeholder="Introduce tu IMC" required>
-
-            <label for="age">Edad:</label>
-            <input type="number" id="age" name="age" placeholder="Introduce tu edad" required>
-
-            <label for="pregnancies">Número de Embarazos:</label>
-            <input type="number" id="pregnancies" name="pregnancies" placeholder="Introduce el número de embarazos">
-
-            <button type="submit">Predecir Diabetes</button>
-        </form>
+  <div class="game-container">
+    <h1>Juego de Desgracias</h1>
+    <div id="cartas-iniciales">
+      <div id="carta-1" class="carta">Carta 1: <span id="valor-carta-1">20</span></div>
+      <div id="carta-2" class="carta">Carta 2: <span id="valor-carta-2">30</span></div>
     </div>
+    <div id="mazo" class="mazo">
+      <button onclick="sacarCarta()">Sacar Carta del Mazo</button>
+    </div>
+    <div id="zonas-clasificacion" class="zonas">
+      <div class="zona" id="zona-antes">Antes de 20</div>
+      <div class="zona" id="zona-entre">Entre 20 y 30</div>
+      <div class="zona" id="zona-despues">Después de 30</div>
+    </div>
+    <div id="puntuacion">
+      <h3>Puntuación: <span id="puntos">0</span></h3>
+    </div>
+    <div id="cartas-jugadas">
+      <h3>Cartas Ganadas:</h3>
+      <ul id="lista-cartas-jugadas"></ul>
+    </div>
+  </div>
+  <script src="game.js"></script>
 </body>
 </html>
