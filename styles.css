@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.game-container {
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+.carta {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.mazo button {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 20px 0;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.zonas {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.zona {
+  width: 80px;
+  padding: 20px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.zona:hover {
+  background-color: #c0c0c0;
+}
+
+#puntuacion {
+  margin-top: 20px;
+}
+
+#cartas-jugadas ul {
+  list-style-type: none;
+  padding-left: 0;
+}
